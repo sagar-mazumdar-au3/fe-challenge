@@ -6,9 +6,9 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
-import Analytics from "./Analytis";
-import { expandItemByid } from "./app/store";
-import { useDispatch } from "react-redux";
+import Analytics from './Analytis';
+import { expandItemByid } from '../redux/store';
+import { useDispatch } from 'react-redux';
 
 export default function ListItems({ id, name, avatar, repoName, description, starCount, issuesCount, lastPushed, isExpand }) {
     const dispatch = useDispatch();

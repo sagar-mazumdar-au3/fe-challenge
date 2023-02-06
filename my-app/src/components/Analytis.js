@@ -2,11 +2,10 @@ import * as React from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import Box from "@mui/material/Box";
-import Stack from "@mui/material/Stack";
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-
-const menuItemLabel = { 1: "Commits", 2: "Additions", 3: "Deletions" };
+import { menuItemLabel } from '../constant/appConstant';
 
 export default function Analytics() {
   const [menu, setMenu] = React.useState(1);

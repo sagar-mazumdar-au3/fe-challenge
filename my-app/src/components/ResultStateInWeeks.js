@@ -2,9 +2,9 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
-import { useSelector, useDispatch } from "react-redux";
-import { changeWeek } from "./app/store";
-import { sagaActions } from "./sagaAction";
+import { useSelector, useDispatch } from 'react-redux';
+import { changeWeek } from '../redux/store';
+import { sagaActions } from '../redux/saga/sagaAction';
 
 const weekById = { 1: "oneWeek", 2: "twoWeeks", 3: "oneMonth" };
 

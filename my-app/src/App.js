@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import RepoList from './RepoList'
+import React, { useEffect } from "react";
+import RepoList from "./components/RepoList";
 import { useDispatch } from "react-redux";
-import { sagaActions } from "./sagaAction";
+import { sagaActions } from "./redux/saga/sagaAction";
 import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
 
 const App = () => {
   const dispatch = useDispatch();

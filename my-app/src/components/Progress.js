@@ -1,8 +1,8 @@
 import React , {useEffect} from 'react';
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
-import { useDispatch } from "react-redux";
-import { sagaActions } from "./sagaAction";
+import { useDispatch } from 'react-redux';
+import { sagaActions } from '../redux/saga/sagaAction';
 
 export default function Progress() {
   const dispatch = useDispatch();
@@ -12,7 +12,6 @@ export default function Progress() {
       window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight
     ){
       // End of the document reached
-      console.log("SCROLL ()");
       dispatch({ type: sagaActions.FETCH_REPO_DATA_SAGA });
     }
   }

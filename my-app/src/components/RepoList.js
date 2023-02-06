@@ -1,11 +1,10 @@
-import * as React from 'react';
-import List from '@mui/material/List';
+import * as React from "react";
+import List from "@mui/material/List";
 import { useSelector } from "react-redux";
-import Progress from './Progress';
-import ListItems from './ListItem';
-import ResultsInWeeks from './ResultStateInWeeks'
-
-const weekById = { 1: "oneWeek", 2: "twoWeeks", 3: "oneMonth" };
+import Progress from "./Progress";
+import ListItems from "./ListItem";
+import ResultsInWeeks from "./ResultStateInWeeks";
+import { weekById } from "../constant/appConstant";
 
 export default function RepoList() {
     const selectedWeek = useSelector(state => state.repo.selectedWeek);

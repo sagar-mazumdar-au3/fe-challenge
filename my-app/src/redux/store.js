@@ -3,7 +3,7 @@ import {
   configureStore,
 } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
-import saga from "../saga";
+import saga from "./saga/saga";
 
 const todoSlice = createSlice({
   name: "repo",
