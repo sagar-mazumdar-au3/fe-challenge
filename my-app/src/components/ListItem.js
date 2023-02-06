@@ -15,7 +15,7 @@ export default function ListItems({ id, name, avatar, repoName, description, sta
 
     const expandItem = useCallback((id) => {
         dispatch(expandItemByid(id));
-    }, []);
+    }, [dispatch]);
 
 
     return (<Box sx={{ border: 1, mb: 2 }}> <ListItem onClick={() => { expandItem(id) }} alignItems="flex-start" sx={{ bgcolor: '#eeeeee', cursor: 'pointer' }}>
