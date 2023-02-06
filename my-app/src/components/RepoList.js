@@ -13,13 +13,13 @@ export default function RepoList() {
 
     return (
         <>
-        <ResultsInWeeks/>
-        <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
-            {repos.map((item) => {
-                return (<ListItems key={item.id} id={item.id} name={item?.owner?.login} avatar={item.owner.avatar_url} repoName={item.name} description={item.description} starCount={item.stargazers_count} issuesCount={item.open_issues_count} lastPushed={item.pushed_at} isExpand={item?.expand}/>);
-            })}
-            {!isAllDataFetched && <Progress />}
-        </List>
+            <ResultsInWeeks />
+            <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+                {repos.map((item) => {
+                    return (<ListItems key={item.id} id={item.id} name={item?.owner?.login} avatar={item.owner.avatar_url} repoName={item.name} description={item.description} starCount={item.stargazers_count} issuesCount={item.open_issues_count} lastPushed={item.pushed_at} isExpand={item?.expand} />);
+                })}
+                {!isAllDataFetched && <Progress />}
+            </List>
         </>
     );
 }

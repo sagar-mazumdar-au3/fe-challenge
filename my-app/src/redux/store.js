@@ -29,15 +29,10 @@ const todoSlice = createSlice({
     fetchData: (state, action) => {
       debugger;
       if (state.selectedWeek === 3) {
-        console.log("oneMonth", state.oneMonth.repos)
         state.oneMonth.repos = [...state.oneMonth.repos, ...action.payload];
       } else if (state.selectedWeek === 2) {
-        console.log("oneMonth", state.twoWeeks.repos)
-
         state.twoWeeks.repos = [...state.twoWeeks.repos, ...action.payload];
       } else {
-        console.log("oneMonth", state.oneWeek.repos)
-
         state.oneWeek.repos = [...state.oneWeek.repos, ...action.payload];
       }
     },

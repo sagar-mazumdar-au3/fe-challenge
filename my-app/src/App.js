@@ -12,18 +12,18 @@ const App = () => {
   useEffect(() => {
     dispatch({ type: sagaActions.FETCH_REPO_DATA_SAGA });
   }, [dispatch]);
-  
+
   return (
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="md">
         <Box>
-        <h1 align="center">-: Most Starred Repos :-</h1>
-        <RepoList />
+          <h1 align="center">-: Most Starred Repos :-</h1>
+          <RepoList />
         </Box>
       </Container>
     </React.Fragment>
-)
+  )
 }
 
 export default App;

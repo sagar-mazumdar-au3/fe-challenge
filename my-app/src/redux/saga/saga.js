@@ -29,7 +29,7 @@ export function* fetchDataSaga() {
             const todayDate = new Date(); // Response with current date is giving empty array so using previous day
             const yesterday = "2022-05-05" || new Date(todayDate.setDate(todayDate.getDate() - 1)).toISOString().slice(0, 10);
             url = `https://api.github.com/search/repositories?q=created:>${yesterday}&sort=stars&order=desc&page=${currentPage}`;
-        } else if(selectedWeek === 2){
+        } else if (selectedWeek === 2) {
             const todayDate = new Date().toISOString().slice(0, 10);
             const preForteenthDay = new Date(new Date().setDate(new Date().getDate() - 14)).toISOString().slice(0, 10);
             url = `https://api.github.com/search/repositories?q=created:${preForteenthDay}..${todayDate}&sort=stars&order=desc&page=${currentPage}`;

@@ -17,7 +17,7 @@ export default function ListItems({ id, name, avatar, repoName, description, sta
         dispatch(expandItemByid(id));
     };
 
-    return (<Box sx={{ border: 1, mb: 2 }}> <ListItem onClick={() => { expandItem(id) }} alignItems="flex-start" sx={{ bgcolor: '#eeeeee' ,cursor: 'pointer'}}>
+    return (<Box sx={{ border: 1, mb: 2 }}> <ListItem onClick={() => { expandItem(id) }} alignItems="flex-start" sx={{ bgcolor: '#eeeeee', cursor: 'pointer' }}>
         <ListItemAvatar>
             <Avatar alt={name} src={avatar} sx={{ width: 60, height: 80 }} variant="square" />
         </ListItemAvatar>

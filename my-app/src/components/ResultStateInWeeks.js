@@ -27,9 +27,9 @@ export default function Progress() {
   return (
     <Box align="center" sx={{ width: '100%' }}>
       <ButtonGroup variant="outlined" aria-label="outlined button group" onClick={(e) => { buttonClickHandler(e) }}>
-        <Button variant={selectedWeek === 3 ? "contained" : "outlined"} value="3">One Month</Button>
-        <Button variant={selectedWeek === 2 ? "contained" : "outlined"} value="2">Two Weeks</Button>
-        <Button variant={selectedWeek === 1 ? "contained" : "outlined"} value="1">One Week</Button>
+        <Button variant={selectedWeek === 3 ? "contained" : "outlined"} value="3">Last One Month</Button>
+        <Button variant={selectedWeek === 2 ? "contained" : "outlined"} value="2">Last Two Weeks</Button>
+        <Button variant={selectedWeek === 1 ? "contained" : "outlined"} value="1">Last One Week</Button>
       </ButtonGroup>
     </Box>
   );
