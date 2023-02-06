@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useCallback } from 'react';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
@@ -13,9 +13,10 @@ import { useDispatch } from 'react-redux';
 export default function ListItems({ id, name, avatar, repoName, description, starCount, issuesCount, lastPushed, isExpand }) {
     const dispatch = useDispatch();
 
-    const expandItem = (id) => {
+    const expandItem = useCallback((id) => {
         dispatch(expandItemByid(id));
-    };
+    }, []);
+
 
     return (<Box sx={{ border: 1, mb: 2 }}> <ListItem onClick={() => { expandItem(id) }} alignItems="flex-start" sx={{ bgcolor: '#eeeeee', cursor: 'pointer' }}>
         <ListItemAvatar>

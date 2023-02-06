@@ -10,14 +10,13 @@ const weekById = { 1: "oneWeek", 2: "twoWeeks", 3: "oneMonth" };
 
 export default function Progress() {
   const dispatch = useDispatch();
-  const selectedWeek = useSelector(state => state.repo.selectedWeek);
-  const repos = useSelector(state => state.repo);
+  const selectedWeek = useSelector(state => state?.repo?.selectedWeek);
+  const repos = useSelector(state => state?.repo);
 
   const buttonClickHandler = (e) => {
-    if (selectedWeek !== Number(e.target.value)) {
-      dispatch(changeWeek(Number(e.target.value)));
-      if (!repos[[weekById[Number(e.target.value)]]].repos.length) {
-        debugger
+    if (selectedWeek !== Number(e?.target?.value)) {
+      dispatch(changeWeek(Number(e?.target?.value)));
+      if (!repos[[weekById[Number(e?.target?.value)]]]?.repos?.length) {
         dispatch({ type: sagaActions.FETCH_REPO_DATA_SAGA });
       }
     }

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useCallback } from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
@@ -8,11 +8,11 @@ import Typography from '@mui/material/Typography';
 import { menuItemLabel } from '../constant/appConstant';
 
 export default function Analytics() {
-  const [menu, setMenu] = React.useState(1);
+  const [menu, setMenu] = useState(1);
 
-  const handleChange = (event) => {
-    setMenu(event.target.value);
-  };
+  const handleChange = useCallback((event) => {
+    setMenu(event?.target?.value);
+  }, []);
 
   return (
     <Box m={3}>

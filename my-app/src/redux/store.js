@@ -27,7 +27,6 @@ const todoSlice = createSlice({
   },
   reducers: {
     fetchData: (state, action) => {
-      debugger;
       if (state.selectedWeek === 3) {
         state.oneMonth.repos = [...state.oneMonth.repos, ...action.payload];
       } else if (state.selectedWeek === 2) {
@@ -38,11 +37,11 @@ const todoSlice = createSlice({
     },
     nextPage: (state) => {
       if (state.selectedWeek === 3) {
-        state.oneMonth.currentPage = state.oneMonth.currentPage + 1;
+        state.oneMonth.currentPage = state?.oneMonth?.currentPage + 1;
       } else if (state.selectedWeek === 2) {
-        state.twoWeeks.currentPage = state.twoWeeks.currentPage + 1;
+        state.twoWeeks.currentPage = state?.twoWeeks?.currentPage + 1;
       } else {
-        state.oneWeek.currentPage = state.oneWeek.currentPage + 1;
+        state.oneWeek.currentPage = state?.oneWeek?.currentPage + 1;
       }
     },
     isAllDataFetched: (state) => {
@@ -56,30 +55,30 @@ const todoSlice = createSlice({
     },
     expandItemByid: (state, action) => {
       if (state.selectedWeek === 3) {
-        state.oneMonth.repos.forEach((item) => {
+        state?.oneMonth?.repos?.forEach((item) => {
           if (item.id === action.payload)
-            item.expand = !item.expand;
+            item.expand = !item?.expand;
         })
       } else if (state.selectedWeek === 2) {
-        state.oneMonth.repos.forEach((item) => {
+        state?.twoWeeks?.repos?.forEach((item) => {
           if (item.id === action.payload)
-            item.expand = !item.expand;
+            item.expand = !item?.expand;
         })
       } else {
-        state.oneMonth.repos.forEach((item) => {
+        state?.oneWeek?.repos?.forEach((item) => {
           if (item.id === action.payload)
-            item.expand = !item.expand;
+            item.expand = !item?.expand;
         })
       }
     },
     changeWeek: (state, action) => {
-      state.selectedWeek = action.payload;
+      state.selectedWeek = action?.payload;
     },
 
   }
 });
 
-export const { fetchData, nextPage, isAllDataFetched, expandItemByid, changeWeek } = todoSlice.actions;
+export const { fetchData, nextPage, isAllDataFetched, expandItemByid, changeWeek } = todoSlice?.actions;
 
 let sagaMiddleware = createSagaMiddleware();
 

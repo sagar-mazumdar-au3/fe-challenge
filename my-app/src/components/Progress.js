@@ -9,7 +9,7 @@ export default function Progress() {
 
   function handleScroll() {
     if (
-      window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight
+      window?.innerHeight + document?.documentElement?.scrollTop === document?.documentElement?.offsetHeight
     ) {
       // End of the document reached
       dispatch({ type: sagaActions.FETCH_REPO_DATA_SAGA });
@@ -17,8 +17,8 @@ export default function Progress() {
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window?.addEventListener("scroll", handleScroll);
+    return () => window?.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
