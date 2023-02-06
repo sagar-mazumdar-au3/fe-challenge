@@ -9,16 +9,16 @@ import Container from '@mui/material/Container';
 const App = () => {
   const dispatch = useDispatch();
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch({ type: sagaActions.FETCH_REPO_DATA_SAGA });
-  }, [dispatch])
+  }, [dispatch]);
   
   return (
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="md">
         <Box>
-        <h1 align="center">Most Starred Repos</h1>
+        <h1 align="center">-: Most Starred Repos :-</h1>
         <RepoList />
         </Box>
       </Container>
